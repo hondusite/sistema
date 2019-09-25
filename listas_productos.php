@@ -27,7 +27,7 @@ while ($fila=mysqli_fetch_array($consulta)){
 	echo '<td>'.$fila['precio_compra'].'</td>';
 	echo '<td>'.$fila['precio_venta'].'</td>';
 	echo '<td>'.$fila['existencia'].'</td>';
-	echo '<td><a href="modificar_producto.php?id_producto='.$id_producto.'" class="btn btn-warning">Modificar</a>&nbsp;<a href="eliminar_producto.php?id_producto='.$id_producto.'" class="btn btn-danger">Eliminar</a></td>';
+	echo '<td><a href="editar_productos.php?id_producto='.$id_producto.'" class="btn btn-warning">Modificar</a>&nbsp;<a href="eliminar_producto.php?id_producto='.$id_producto.'" class="btn btn-danger">Eliminar</a></td>';
 	echo '</tr>';
 }
 echo '</table>';
