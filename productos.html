@@ -8,46 +8,50 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Productos</title>
   </head>
   <body>
-    <form id="formproductos" class="col-6">
-      <div class="row">
-        <label for="codigo" class="col-5">Codigo</label>
-        <input type="text" name="codigo" id="codigo" class="form-control col-6 mt-2">
-      </div>
-      <div class="row">
-        <label for="descripcion" class="col-5">Descripción</label>
-        <input type="text" name="descripcion" id="descripcion" class="form-control col-6 mt-2">
-      </div>
-      <div class="row">
-        <label for="precio_compra" class="col-5">Precio Compra</label>
-        <input type="number" name="precio_compra" id="precio_compra" class="form-control col-6 mt-2">
-      </div>
-      <div class="row">
-        <label for="precio_venta" class="col-5">Precio Venta</label>
-        <input type="number" name="precio_venta" id="precio_venta" class="form-control col-6 mt-2">
-      </div>
-      <div class="row">
-        <label for="existencia" class="col-5">Existencia</label>
-        <input type="number" name="existencia" id="existencia" class="form-control col-6 mt-2">
-      </div>
-      <div class="row">
-        <label for="gravado" class="col-5">Paga Impuesto</label>
-        <select name="gravado" id="gravado" class="form-control col-6 mt-2">
-          <option value="1">Si paga</option>
-          <option value="0">Excento</option>
-        </select>
-      </div>
-      <div class="row">
-        <label for="id_categoria" class="col-5">Categoría</label>
-        <input type="number" name="id_categoria" id="id_categoria" class="form-control col-6 mt-2">
-      </div>
-      <div class="row">
-        <button type="submit" class="btn btn-success">Guardar</button>
-      </div>
-      <div class="col-12 mt-5" id="respuesta"></div>
-    </form>
+    <div class="container">
+      <h2>Nuevo producto</h2>
+      <form id="frmproductos" class="col-6 mt-3">
+        <div class="row">
+            <label for="codigo" class="col-5">Código:</label>
+            <input type="text" name="codigo" id="codigo" class="form-control mt-2 col-7">
+        </div>
+        <div class="row">
+            <label for="descripcion" class="col-5">Descripción:</label>
+            <input type="text" name="descripcion" id="descripcion" class="form-control mt-2 col-7">
+        </div>
+        <div class="row">
+            <label for="precio_compra" class="col-5">Precio compra:</label>
+            <input type="number" name="precio_compra" id="precio_compra" class="form-control mt-2 col-7">
+        </div>
+        <div class="row">
+            <label for="precio_venta" class="col-5">Precio venta:</label>
+            <input type="text" name="precio_venta" id="precio_venta" class="form-control mt-2 col-7">
+        </div>
+        <div class="row">
+            <label for="gravado" class="col-5">Gravado:</label>
+            <select name="gravado" id="gravado" class="form-control mt-2 col-7">
+              <option value="1">Si paga</option>
+              <option value="0">excento</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="existencia" class="col-5">Existencia:</label>
+            <input type="number" name="existencia" id="existencia" class="form-control mt-2 col-7">
+        </div>
+        <div class="row">
+            <label for="id_categoria" class="col-5">Categoría:</label>
+            <input type="number" name="id_categoria" id="id_categoria" class="form-control mt-2 col-7">
+        </div>
+        <div class="row">
+         <button type="submit" class="btn btn-success">Guardar Producto</button>
+        </div>
+        <div class="col-12 mt-3" id="respuesta"></div>
+      </form>
+
     <script src="jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
