@@ -27,7 +27,7 @@ $id_categoria=$fila['id_categoria'];
   </head>
   <body>
     <div class="container">
-      <h2>Nuevo producto</h2>
+      <h2>Editar producto</h2>
       <form id="frmproductos" class="col-6 mt-3">
         <input type="hidden" name="id_producto" id="id_producto" value="<?php echo $id_producto;?>">
         <div class="row">
@@ -60,7 +60,22 @@ $id_categoria=$fila['id_categoria'];
         </div>
         <div class="row">
             <label for="id_categoria" class="col-5">Categoría:</label>
-            <input type="number" name="id_categoria" id="id_categoria" class="form-control mt-2 col-7" value="<?php echo $id_categoria;?>">
+            <select name="id_categoria" id="id_categoria" class="form-control mt-2 col-7">
+            <?php
+            $cat=mysqli_query($con,"SELECT * FROM categorias");
+            $option='';
+            while ($fila=mysqli_fetch_array($cat)){
+                if ($fila['id_categoria']==$id_categoria){
+                    $txt='selected';
+                }else{
+                    $txt='';
+                }
+                $option.='<option value="'.$fila['id_categoria'].'" '.$txt.'>'.$fila['categoria'].'</option>';
+            }
+            echo $option;
+
+            ?>
+            </select>
         </div>
         <div class="row">
          <button type="submit" class="btn btn-success">Guardar Producto</button>

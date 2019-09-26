@@ -17,3 +17,15 @@ $("#frmproductos").on("submit",function(e){
   	}
   });
 })
+
+opciones();
+
+function opciones(){
+  $.ajax({
+    type: "POST",
+    url: "listas_categoria.php",
+    success: function(datos){
+      $("#id_categoria").html(datos);
+    }
+  });
+}
